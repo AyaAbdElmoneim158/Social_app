@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:social_app/screens/chat_screen.dart';
+import 'package:social_app/screens/login_screen.dart';
+import 'package:social_app/screens/register_screen.dart';
 import 'package:social_app/screens/welcome_screen.dart';
 
 void main() {
@@ -11,6 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Social App', home: WelcomeScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Social App',
+      home: const WelcomeScreen(),
+      routes: {
+        "welcome_screen": (context) => const WelcomeScreen(),
+        "login_screen": (context) => const LoginScreen(),
+        "register_screen": (context) => const RegistrationScreen(),
+        "chat_screen": (context) => const ChatScreen()
+      },
+    );
   }
 }

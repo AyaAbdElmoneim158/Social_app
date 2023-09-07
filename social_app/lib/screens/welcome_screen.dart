@@ -43,18 +43,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Expanded(
                   flex: 5,
                   child: MyButton(
-                    color: const Color(0xffF0672B),
-                    title: 'Sign in',
-                    onPressed: () {},
-                  ),
+                      color: const Color(0xfff5b228),
+                      title: 'Sign in',
+                      onPressed: () {
+                        debugPrint("SignIn");
+                        Navigator.pushNamed(context, "login_screen");
+                      }),
                 ),
-                const Expanded(flex: 2, child: SizedBox()),
+                const Expanded(flex: 1, child: SizedBox()),
                 Expanded(
                   flex: 5,
                   child: MyButton(
-                    color: const Color(0xfff5b228),
+                    color: const Color(0xffF0672B),
                     title: 'register',
-                    onPressed: () {},
+                    onPressed: () =>
+                        Navigator.pushNamed(context, "register_screen"),
                   ),
                 )
               ],
